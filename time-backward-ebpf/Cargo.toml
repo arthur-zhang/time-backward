@@ -1,0 +1,18 @@
+[package]
+name = "time-backward-ebpf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+time-backward-common = { path = "../time-backward-common" }
+
+aya-ebpf = { workspace = true }
+aya-log-ebpf = { workspace = true }
+log = "0.4.22"
+
+[build-dependencies]
+which = { workspace = true }
+
+[[bin]]
+name = "time-backward"
+path = "src/main.rs"
